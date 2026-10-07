@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Lenguajes: HTML5 (marcado) · CSS3 externo + interno (estilos) · JavaScript externo (programación) · Bootstrap 5 (framework) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Talleres de arte y deporte del Instituto Superior Los Chancas. Inscríbete en línea.">
+  <title>Talleres - Los Chancas</title>
+  <script>try{var t=localStorage.getItem("tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);document.documentElement.setAttribute("data-bs-theme",t)}catch(e){}</script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="talleres.css">
+  <!-- Hoja de estilo INTERNA: ajustes puntuales de esta página. El diseño general está en el CSS externo. -->
+  <style>
+    /* Accesibilidad: enlace que aparece al pulsar Tab para saltar directo al contenido */
+    .saltar { position: absolute; left: -999px; top: 0; z-index: 3000; padding: .6rem 1.2rem; border-radius: 50rem; background: var(--oro); color: #1a1a1a; font-weight: 700; text-decoration: none; }
+    .saltar:focus { left: 1rem; top: 1rem; }
+    /* Recuadro que muestra los datos de la simulación de envío (POST/GET) */
+    .envio-simulado { margin-top: .75rem; font-size: .85rem; }
+    .envio-simulado summary { cursor: pointer; font-weight: 700; }
+    .envio-simulado pre { margin: .5rem 0 0; padding: .75rem 1rem; border-radius: var(--r1); background: var(--marino); color: #a7f3d0; white-space: pre-wrap; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header>
+    <h1><a href="index.html">Instituto Superior Los Chancas</a></h1>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="btn-tema" id="btnTema" type="button" aria-label="Cambiar a modo oscuro"></button>
+      <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#quienes-somos">¿Quiénes Somos?</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#carreras">Carreras</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sedes</a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="sedes.html">Ver todo</a></li>
+        <li><a class="dropdown-item" href="sedes.html#cercado">Cercado de Lima</a></li>
+        <li><a class="dropdown-item" href="sedes.html#callao">Callao</a></li>
+        <li><a class="dropdown-item" href="sedes.html#ate">Ate</a></li>
+        <li><a class="dropdown-item" href="sedes.html#santa-anita">Santa Anita</a></li>
+        <li><a class="dropdown-item" href="sedes.html#el-agustino">El Agustino</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Talleres</a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="talleres.html">Ver todo</a></li>
+        <li><a class="dropdown-item" href="talleres.html#oratoria">Oratoria</a></li>
+        <li><a class="dropdown-item" href="talleres.html#danzas">Danzas</a></li>
+        <li><a class="dropdown-item" href="talleres.html#musica">Música</a></li>
+        <li><a class="dropdown-item" href="talleres.html#teatro">Teatro</a></li>
+        <li><a class="dropdown-item" href="talleres.html#futbol">Fútbol</a></li>
+        <li><a class="dropdown-item" href="talleres.html#karate">Karate</a></li>
+        <li><a class="dropdown-item" href="talleres.html#voley">Vóley</a></li>
+        <li><a class="dropdown-item" href="talleres.html#basquet">Basquet</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#redes">Redes Sociales</a></li>
+      <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contáctenos</a></li>
+      </ul>
+      </div>
+    </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="talleres">
+      <h2>Nuestros Talleres</h2>
+      <p>Los talleres son opcionales y se llevan fuera del horario de clases.</p>
+      <h3>Arte y cultura</h3>
+      <div class="contenedor-talleres">
+        <article class="taller" id="oratoria">
+          <img src="img/oratoria.jpg" class="img-fluid foto-taller" alt="Taller oratoria">
+          <h4>Oratoria</h4>
+          <p>Aprende a hablar en público con seguridad.</p>
+          <a href="#registro" class="btn btn-sm btn-success mt-2" data-taller="Oratoria">Inscribirme</a>
+        </article>
+        <article class="taller" id="danzas">
+          <img src="img/danzas.jpg" class="img-fluid foto-taller" alt="Taller danzas">
+          <h4>Danzas</h4>
+          <p>Practica danzas típicas del Perú.</p>
+          <a href="#registro" class="btn btn-sm btn-success mt-2" data-taller="Danzas">Inscribirme</a>
+        </article>
+        <article class="taller" id="musica">
+          <img src="img/musica.jpg" class="img-fluid foto-taller" alt="Taller musica">
+          <h4>Música</h4>
+          <p>Aprende a tocar un instrumento o cantar.</p>
+          <a href="#registro" class="btn btn-sm btn-success mt-2" data-taller="Música">Inscribirme</a>
+        </article>
+        <article class="taller" id="teatro">
+          <img src="img/teatro.jpg" class="img-fluid foto-taller" alt="Taller teatro">
+          <h4>Teatro</h4>
+          <p>Actuación y expresión corporal.</p>
+          <a href="#registro" class="btn btn-sm btn-success mt-2" data-taller="Teatro">Inscribirme</a>
+        </article>
+      </div>
+      <h3>Deporte</h3>
+      <div class="contenedor-talleres">
+        <article class="taller" id="futbol">
+          <img src="img/futbol.jpg" class="img-fluid foto-taller" alt="Taller futbol">
+          <h4>Fútbol</h4>
+          <p>Entrenamientos y campeonatos entre sedes.</p>
+          <a href="#registro" class="btn btn-sm btn-success mt-2" data-taller="Fútbol">Inscribirme</a>
+        </article>
+        <article class="taller" id="karate">
+          <img src="img/karate.jpg" class="img-fluid foto-taller" alt="Taller karate">
+          <h4>Karate</h4>
+          <p>Técnica y disciplina.</p>
+          <a href="#registro" class="btn btn-sm btn-success mt-2" data-taller="Karate">Inscribirme</a>
+        </article>
+        <article class="taller" id="voley">
+          <img src="img/voley.jpg" class="img-fluid foto-taller" alt="Taller voley">
+          <h4>Vóley</h4>
+          <p>Entrenamientos en equipo.</p>
+          <a href="#registro" class="btn btn-sm btn-success mt-2" data-taller="Vóley">Inscribirme</a>
+        </article>
+        <article class="taller" id="basquet">
+          <img src="img/basquet.jpg" class="img-fluid foto-taller" alt="Taller basquet">
+          <h4>Basquet</h4>
+          <p>Entrenamientos y partidos.</p>
+          <a href="#registro" class="btn btn-sm btn-success mt-2" data-taller="Basquet">Inscribirme</a>
+        </article>
+      </div>
+      <a href="#registro" class="btn btn-success">Inscríbete</a>
+      <a href="index.html" class="btn btn-secondary">Volver al inicio</a>
+    </section>
+
+    <section id="registro">
+      <h2>Inscríbete a un taller</h2>
+      <p>Elige tu taller y déjanos tus datos. Te contactaremos para confirmar el horario y la sede.</p>
+      <!-- POST: los datos viajarían en el cuerpo de la petición. Aquí se simula con JavaScript (no hay servidor).
+           GET: los datos van en la URL (?campo=valor), como en ?sede=Ate o ?taller=Karate. -->
+      <form id="formRegistro" method="post" action="#" novalidate>
+      <div class="mb-3">
+        <label for="nombres" class="form-label">Nombres y apellidos</label>
+        <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Ej. Juan Pérez">
+      </div>
+      <div class="mb-3">
+        <label for="dni" class="form-label">DNI</label>
+        <input type="text" inputmode="numeric" maxlength="8" autocomplete="off" class="form-control" id="dni" name="dni" placeholder="8 dígitos">
+      </div>
+      <div class="mb-3">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="number" class="form-control" id="edad" name="edad" placeholder="Ej. 18">
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" name="correo" placeholder="correo@ejemplo.com">
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="9 dígitos">
+      </div>
+      <div class="mb-3">
+        <label for="taller" class="form-label">Taller de interés</label>
+        <select class="form-select" id="taller" name="taller">
+          <option value="">Selecciona un taller</option>
+          <optgroup label="Arte y cultura">
+            <option value="Oratoria">Oratoria</option>
+            <option value="Danzas">Danzas</option>
+            <option value="Música">Música</option>
+            <option value="Teatro">Teatro</option>
+          </optgroup>
+          <optgroup label="Deporte">
+            <option value="Fútbol">Fútbol</option>
+            <option value="Karate">Karate</option>
+            <option value="Vóley">Vóley</option>
+            <option value="Basquet">Basquet</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="mb-3">
+        <p class="form-label">Tu nivel en el taller</p>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="nivel" id="principiante" value="Principiante">
+          <label class="form-check-label" for="principiante">Principiante</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="nivel" id="intermedio" value="Intermedio">
+          <label class="form-check-label" for="intermedio">Intermedio</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="nivel" id="avanzado" value="Avanzado">
+          <label class="form-check-label" for="avanzado">Avanzado</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <p class="form-label">Horario preferido</p>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="horario" id="tarde" value="Tarde">
+          <label class="form-check-label" for="tarde">Tarde</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="horario" id="noche" value="Noche">
+          <label class="form-check-label" for="noche">Noche</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="horario" id="sabado" value="Sábado">
+          <label class="form-check-label" for="sabado">Sábado</label>
+        </div>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terminos" name="terminos">
+        <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar inscripción</button>
+      <button type="reset" class="btn btn-secondary">Limpiar</button>
+      <div id="mensaje"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer id="redes">
+    <p class="redes-titulo">Síguenos en redes</p>
+    <p class="redes-sub">Novedades, fechas de matrícula y actividades de los talleres.</p>
+    <div class="redes-pie">
+      <a class="red-btn facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+      <a class="red-btn instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+      <a class="red-btn tiktok" href="#" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      <a class="red-btn youtube" href="#" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+      <a class="red-btn whatsapp" href="https://wa.me/51987654321" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp 987 654 321"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2026 Instituto Superior Los Chancas. Todos los derechos reservados.</p>
+    <p><a href="index.html">Inicio</a> | <a href="sedes.html">Sedes</a> | <a href="talleres.html">Talleres</a> | <a href="#registro">Registro</a></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="talleres.js"></script>
+</body>
+</html>

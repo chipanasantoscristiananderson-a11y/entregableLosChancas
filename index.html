@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Lenguajes: HTML5 (marcado) · CSS3 externo + interno (estilos) · JavaScript externo (programación) · Bootstrap 5 (framework) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instituto Superior Los Chancas: carreras técnicas, sedes en Lima y talleres de arte y deporte. Regístrate en línea.">
+  <title>Instituto Superior Los Chancas</title>
+  <script>try{var t=localStorage.getItem("tema")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",t);document.documentElement.setAttribute("data-bs-theme",t)}catch(e){}</script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <!-- Hoja de estilo INTERNA: ajustes puntuales de esta página. El diseño general está en el CSS externo. -->
+  <style>
+    /* Accesibilidad: enlace que aparece al pulsar Tab para saltar directo al contenido */
+    .saltar { position: absolute; left: -999px; top: 0; z-index: 3000; padding: .6rem 1.2rem; border-radius: 50rem; background: var(--oro); color: #1a1a1a; font-weight: 700; text-decoration: none; }
+    .saltar:focus { left: 1rem; top: 1rem; }
+    /* Recuadro que muestra los datos de la simulación de envío (POST/GET) */
+    .envio-simulado { margin-top: .75rem; font-size: .85rem; }
+    .envio-simulado summary { cursor: pointer; font-weight: 700; }
+    .envio-simulado pre { margin: .5rem 0 0; padding: .75rem 1rem; border-radius: var(--r1); background: var(--marino); color: #a7f3d0; white-space: pre-wrap; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header>
+    <h1><a href="index.html">Instituto Superior Los Chancas</a></h1>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="btn-tema" id="btnTema" type="button" aria-label="Cambiar a modo oscuro"></button>
+      <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#quienes-somos">¿Quiénes Somos?</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#carreras">Carreras</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sedes</a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="sedes.html">Ver todo</a></li>
+        <li><a class="dropdown-item" href="sedes.html#cercado">Cercado de Lima</a></li>
+        <li><a class="dropdown-item" href="sedes.html#callao">Callao</a></li>
+        <li><a class="dropdown-item" href="sedes.html#ate">Ate</a></li>
+        <li><a class="dropdown-item" href="sedes.html#santa-anita">Santa Anita</a></li>
+        <li><a class="dropdown-item" href="sedes.html#el-agustino">El Agustino</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Talleres</a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="talleres.html">Ver todo</a></li>
+        <li><a class="dropdown-item" href="talleres.html#oratoria">Oratoria</a></li>
+        <li><a class="dropdown-item" href="talleres.html#danzas">Danzas</a></li>
+        <li><a class="dropdown-item" href="talleres.html#musica">Música</a></li>
+        <li><a class="dropdown-item" href="talleres.html#teatro">Teatro</a></li>
+        <li><a class="dropdown-item" href="talleres.html#futbol">Fútbol</a></li>
+        <li><a class="dropdown-item" href="talleres.html#karate">Karate</a></li>
+        <li><a class="dropdown-item" href="talleres.html#voley">Vóley</a></li>
+        <li><a class="dropdown-item" href="talleres.html#basquet">Basquet</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#redes">Redes Sociales</a></li>
+      <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contáctenos</a></li>
+      </ul>
+      </div>
+    </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio">
+      <img src="img/Entrada del Instituto Los Chancas.png" class="img-fluid portada" alt="Instituto Superior Los Chancas">
+      <h2>Instituto Superior Los Chancas</h2>
+      <p>Estudia una carrera técnica y participa en talleres de arte y deporte.</p>
+      <div class="hero-botones">
+        <a href="#carreras" class="btn btn-light">Ver carreras</a>
+        <a href="#registro" class="btn btn-warning">Regístrate</a>
+      </div>
+      <div class="contenedor-resumen">
+        <div class="resumen"><h3>Carreras técnicas</h3><p>Programas pensados para trabajar al terminar.</p></div>
+        <div class="resumen"><h3>5 sedes en Lima</h3><p>Elige la más cercana a ti.</p></div>
+        <div class="resumen"><h3>Talleres</h3><p>Arte y deporte para todos los estudiantes.</p></div>
+      </div>
+    </section>
+
+    <section id="quienes-somos">
+      <h2>¿Quiénes Somos?</h2>
+      <p>Somos el Instituto Superior Los Chancas, un instituto que forma técnicos para el trabajo y que también se preocupa por que sus estudiantes desarrollen otras habilidades fuera del salón de clases.</p>
+      <p>Además de estudiar tu carrera, puedes participar en actividades de arte y deporte, y registrarte de forma rápida desde esta página.</p>
+    </section>
+
+    <section id="porque-elegirnos">
+      <h2>¿Por qué elegirnos?</h2>
+      <div class="contenedor-beneficios">
+        <div class="beneficio"><h3>Clases prácticas</h3><p>Aprendes haciendo, no solo escuchando.</p></div>
+        <div class="beneficio"><h3>Sedes cercanas</h3><p>Cinco sedes en Lima para que no pierdas tiempo viajando.</p></div>
+        <div class="beneficio"><h3>Talleres</h3><p>Arte y deporte para que tu paso por el instituto sea más completo.</p></div>
+        <div class="beneficio"><h3>Registro por internet</h3><p>Dejas tus datos desde la web, sin hacer colas.</p></div>
+      </div>
+    </section>
+
+    <section id="carreras">
+      <h2>Carreras</h2>
+      <div class="container"><div class="row">
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/desarrollo de software.jpg" class="card-img-top foto-carrera" alt="Carrera de Desarrollo de Software">
+            <div class="card-body">
+            <h5 class="card-title">Desarrollo de Software</h5>
+            <p class="card-text">Aprendes a programar páginas web y aplicaciones.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/redes.jpg" class="card-img-top foto-carrera" alt="Carrera de Redes y Comunicaciones">
+            <div class="card-body">
+            <h5 class="card-title">Redes y Comunicaciones</h5>
+            <p class="card-text">Aprendes a instalar y cuidar redes de computadoras.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/administraccion.jpg" class="card-img-top foto-carrera" alt="Carrera de Administración de Empresas">
+            <div class="card-body">
+            <h5 class="card-title">Administración de Empresas</h5>
+            <p class="card-text">Aprendes a organizar y manejar una empresa.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/diseño grafico.jpg" class="card-img-top foto-carrera" alt="Carrera de Diseño Gráfico">
+            <div class="card-body">
+            <h5 class="card-title">Diseño Gráfico</h5>
+            <p class="card-text">Aprendes a crear logos, afiches y diseños digitales.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/contabilidad.jpg" class="card-img-top foto-carrera" alt="Carrera de Contabilidad">
+            <div class="card-body">
+            <h5 class="card-title">Contabilidad</h5>
+            <p class="card-text">Aprendes a llevar las cuentas y los impuestos de una empresa.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/enfermeria.jpg" class="card-img-top foto-carrera" alt="Carrera de Enfermería Técnica">
+            <div class="card-body">
+            <h5 class="card-title">Enfermería Técnica</h5>
+            <p class="card-text">Aprendes a cuidar y atender a pacientes en centros de salud.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/mecanica.jpg" class="card-img-top foto-carrera" alt="Carrera de Mecánica Automotriz">
+            <div class="card-body">
+            <h5 class="card-title">Mecánica Automotriz</h5>
+            <p class="card-text">Aprendes a revisar y reparar autos y motos.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/electricidad.jpg" class="card-img-top foto-carrera" alt="Carrera de Electricidad Industrial">
+            <div class="card-body">
+            <h5 class="card-title">Electricidad Industrial</h5>
+            <p class="card-text">Aprendes a instalar y mantener sistemas eléctricos.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/logistica.jpg" class="card-img-top foto-carrera" alt="Carrera de Logística y Almacenes">
+            <div class="card-body">
+            <h5 class="card-title">Logística y Almacenes</h5>
+            <p class="card-text">Aprendes a controlar inventarios, almacenes y despachos.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/marketing.jpg" class="card-img-top foto-carrera" alt="Carrera de Marketing Digital">
+            <div class="card-body">
+            <h5 class="card-title">Marketing Digital</h5>
+            <p class="card-text">Aprendes a promocionar negocios en redes sociales y en internet.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/gastronomia.jpg" class="card-img-top foto-carrera" alt="Carrera de Gastronomía">
+            <div class="card-body">
+            <h5 class="card-title">Gastronomía</h5>
+            <p class="card-text">Aprendes a cocinar, preparar menús y atender un restaurante.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/farmaceutico.jpg" class="card-img-top foto-carrera" alt="Carrera de Farmacia Técnica">
+            <div class="card-body">
+            <h5 class="card-title">Farmacia Técnica</h5>
+            <p class="card-text">Aprendes a atender en farmacias y controlar medicamentos.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/soldadura.jpg" class="card-img-top foto-carrera" alt="Carrera de Soldadura y Metalmecánica">
+            <div class="card-body">
+            <h5 class="card-title">Soldadura y Metalmecánica</h5>
+            <p class="card-text">Aprendes a soldar y fabricar piezas de metal.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/cosmetologia.jpg" class="card-img-top foto-carrera" alt="Carrera de Cosmetología">
+            <div class="card-body">
+            <h5 class="card-title">Cosmetología</h5>
+            <p class="card-text">Aprendes técnicas de cuidado del cabello, piel y uñas.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/construccion.jpg" class="card-img-top foto-carrera" alt="Carrera de Construcción Civil">
+            <div class="card-body">
+            <h5 class="card-title">Construcción Civil</h5>
+            <p class="card-text">Aprendes a leer planos y apoyar en obras de construcción.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="card h-100">
+            <img src="img/secretario.avif" class="card-img-top foto-carrera" alt="Carrera de Secretariado Ejecutivo">
+            <div class="card-body">
+            <h5 class="card-title">Secretariado Ejecutivo</h5>
+            <p class="card-text">Aprendes a organizar la agenda y los documentos de una oficina.</p>
+            <p><strong>Duración:</strong> 3 años</p>
+            <a href="#registro" class="btn btn-primary">Más información</a>
+          </div></div>
+        </div>
+      </div></div>
+    </section>
+
+    <section id="admision">
+      <h2>¿Cómo ingresar?</h2>
+      <div class="contenedor-pasos">
+        <div class="paso"><h3>Elige</h3><p>Escoge la carrera que más te gusta.</p></div>
+        <div class="paso"><h3>Regístrate</h3><p>Llena el formulario con tus datos.</p></div>
+        <div class="paso"><h3>Te contactamos</h3><p>Te llamamos para darte la información.</p></div>
+        <div class="paso"><h3>Inscríbete</h3><p>Completa tu matrícula y empieza a estudiar.</p></div>
+      </div>
+      <a href="#registro" class="btn btn-success">Quiero registrarme</a>
+    </section>
+
+    <section id="sedes-resumen">
+      <h2>Sedes</h2>
+      <p>Tenemos 5 sedes en Lima: Cercado de Lima, Callao, Ate, Santa Anita y El Agustino. En cada una encontrarás su dirección y horario de atención.</p>
+      <a href="sedes.html" class="btn btn-primary">Ver sedes</a>
+    </section>
+
+    <section id="talleres-resumen">
+      <h2>Talleres</h2>
+      <p>Además de tu carrera, puedes inscribirte en talleres de arte (oratoria, danzas, música y teatro) y de deporte (fútbol, karate, vóley y basquet).</p>
+      <a href="talleres.html" class="btn btn-primary">Ver talleres</a>
+    </section>
+
+    <section id="registro">
+      <h2>Regístrate</h2>
+      <p>Déjanos tus datos y te contactaremos con información de la carrera que te interesa.</p>
+      <!-- POST: los datos viajarían en el cuerpo de la petición. Aquí se simula con JavaScript (no hay servidor).
+           GET: los datos van en la URL (?campo=valor), como en ?sede=Ate o ?taller=Karate. -->
+      <form id="formRegistro" method="post" action="#" novalidate>
+      <div class="mb-3">
+        <label for="nombres" class="form-label">Nombres y apellidos</label>
+        <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Ej. Juan Pérez">
+      </div>
+      <div class="mb-3">
+        <label for="dni" class="form-label">DNI</label>
+        <input type="text" inputmode="numeric" maxlength="8" autocomplete="off" class="form-control" id="dni" name="dni" placeholder="8 dígitos">
+      </div>
+      <div class="mb-3">
+        <label for="edad" class="form-label">Edad</label>
+        <input type="number" class="form-control" id="edad" name="edad" placeholder="Ej. 18">
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" name="correo" placeholder="correo@ejemplo.com">
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="9 dígitos">
+      </div>
+      <div class="mb-3">
+        <label for="sede" class="form-label">Sede de interés</label>
+        <select class="form-select" id="sede" name="sede">
+          <option value="">Selecciona una opción</option>
+          <option value="Cercado de Lima">Cercado de Lima</option>
+          <option value="Callao">Callao</option>
+          <option value="Ate">Ate</option>
+          <option value="Santa Anita">Santa Anita</option>
+          <option value="El Agustino">El Agustino</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="carrera" class="form-label">Carrera de interés</label>
+        <select class="form-select" id="carrera" name="carrera">
+          <option value="">Selecciona una opción</option>
+          <option value="Desarrollo de Software">Desarrollo de Software</option>
+          <option value="Redes y Comunicaciones">Redes y Comunicaciones</option>
+          <option value="Administración de Empresas">Administración de Empresas</option>
+          <option value="Diseño Gráfico">Diseño Gráfico</option>
+          <option value="Contabilidad">Contabilidad</option>
+          <option value="Enfermería Técnica">Enfermería Técnica</option>
+          <option value="Mecánica Automotriz">Mecánica Automotriz</option>
+          <option value="Electricidad Industrial">Electricidad Industrial</option>
+          <option value="Logística y Almacenes">Logística y Almacenes</option>
+          <option value="Marketing Digital">Marketing Digital</option>
+          <option value="Gastronomía">Gastronomía</option>
+          <option value="Farmacia Técnica">Farmacia Técnica</option>
+          <option value="Soldadura y Metalmecánica">Soldadura y Metalmecánica</option>
+          <option value="Cosmetología">Cosmetología</option>
+          <option value="Construcción Civil">Construcción Civil</option>
+          <option value="Secretariado Ejecutivo">Secretariado Ejecutivo</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <p class="form-label">Horario preferido</p>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="horario" id="manana" value="Mañana">
+          <label class="form-check-label" for="manana">Mañana</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="horario" id="tarde" value="Tarde">
+          <label class="form-check-label" for="tarde">Tarde</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="horario" id="noche" value="Noche">
+          <label class="form-check-label" for="noche">Noche</label>
+        </div>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terminos" name="terminos">
+        <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar registro</button>
+      <button type="reset" class="btn btn-secondary">Limpiar</button>
+      <div id="mensaje"></div>
+      </form>
+    </section>
+
+
+    <section id="contacto">
+      <h2>Contáctenos</h2>
+      <p><strong>Teléfono:</strong> (01) 555-1234</p>
+      <p><strong>WhatsApp:</strong> 987 654 321</p>
+      <p><strong>Correo:</strong> informes@loschancas.edu.pe</p>
+      <p><strong>Horario de atención:</strong> Lunes a sábado, de 8:00 a.m. a 9:00 p.m.</p>
+    </section>
+  </main>
+
+  <footer id="redes">
+    <p class="redes-titulo">Síguenos en redes</p>
+    <p class="redes-sub">Novedades, fechas de matrícula y actividades de los talleres.</p>
+    <div class="redes-pie">
+      <a class="red-btn facebook" href="#" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+      <a class="red-btn instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+      <a class="red-btn tiktok" href="#" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      <a class="red-btn youtube" href="#" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+      <a class="red-btn whatsapp" href="https://wa.me/51987654321" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp 987 654 321"><i class="bi bi-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2026 Instituto Superior Los Chancas. Todos los derechos reservados.</p>
+    <p><a href="index.html">Inicio</a> | <a href="sedes.html">Sedes</a> | <a href="talleres.html">Talleres</a> | <a href="#registro">Registro</a></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
